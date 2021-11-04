@@ -10,9 +10,9 @@ on:
   push:
     branches:
       - master
-    #paths:
-      #- 'router/nanopi_r2s/.config'
-      #- '.github/workflows/build-openwrt-nanopi_r2s.yml'
+    paths:
+      - 'router/nanopi_r2s/.config'
+      - '.github/workflows/build-openwrt-nanopi_r2s.yml'
   # schedule:
   #   - cron: '0 17 * * 0,3'
 
@@ -169,7 +169,7 @@ jobs:
         body: |
           This is OpenWrt firmware for ${{ env.DEVICE_NAME }}
           * Firmware information
-          Default IP: 192.168.10.1
+          Default IP: 192.168.2.1
           Default username: root
           Default password: password
           [WETRANSFER](${{ env.WET_URL }})
